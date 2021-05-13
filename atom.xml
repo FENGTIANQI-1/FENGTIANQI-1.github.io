@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-05-09T05:40:09.695Z</updated>
+  <updated>2021-05-13T15:01:42.158Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>关于如何把项目上传到github（怎么更新和创建分支）</title>
+    <link href="http://example.com/2021/05/13/%E5%85%B3%E4%BA%8E%E5%A6%82%E4%BD%95%E6%8A%8A%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BC%A0%E5%88%B0github%EF%BC%88%E6%80%8E%E4%B9%88%E6%9B%B4%E6%96%B0%E5%92%8C%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF%EF%BC%89/"/>
+    <id>http://example.com/2021/05/13/%E5%85%B3%E4%BA%8E%E5%A6%82%E4%BD%95%E6%8A%8A%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BC%A0%E5%88%B0github%EF%BC%88%E6%80%8E%E4%B9%88%E6%9B%B4%E6%96%B0%E5%92%8C%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AF%EF%BC%89/</id>
+    <published>2021-05-13T14:44:23.000Z</published>
+    <updated>2021-05-13T15:01:42.158Z</updated>
+    
+    <content type="html"><![CDATA[<p>这里我简单记录把项目上传到github的过程<br>创建仓库我就不写了，直接写几个重要的git命令<br>git status  查看代码的状态<br>git add . 把所有代码添加到暂存区<br>git commit -m “提交日志，写你的记录内容” 把暂存区的所有代码提交到了本地仓库中<br>git branch 查看当前所在的分支<br>git checkout master （我举例的分支名称是master）  切换到你想切换的分支<br>git merge login （我举例想合并的分支名称是login）  把你想合并的分支合并到了当前所在的分支上<br>git push 推送代码到云端仓库<br>git push origin login（我举例的分支名称是login）  把你当前内容推送到一个新的分支上</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这里我简单记录把项目上传到github的过程&lt;br&gt;创建仓库我就不写了，直接写几个重要的git命令&lt;br&gt;git status  查看代码的状态&lt;br&gt;git add . 把所有代码添加到暂存区&lt;br&gt;git commit -m “提交日志，写你的记录内容” 把暂存区的所有</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>我的第一篇博客文章</title>
     <link href="http://example.com/2021/05/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
     <id>http://example.com/2021/05/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</id>
     <published>2021-05-05T08:26:58.000Z</published>
-    <updated>2021-05-09T05:40:09.695Z</updated>
+    <updated>2021-05-09T07:51:52.723Z</updated>
     
     <content type="html"><![CDATA[<h2 id="第一篇（hexo博客搭建）"><a href="#第一篇（hexo博客搭建）" class="headerlink" title="第一篇（hexo博客搭建）"></a>第一篇（hexo博客搭建）</h2><p>自学前端已经有半年了，这个时候才刚刚搭建自己博客，其实是有点晚了。<br>随着学习的深入，我越来越觉得需要一个地方来记录学习过程，因为在我学习过程中会遇见很多问题，解决以后如果不记录下来，很容易忘记，其次我非常感谢那些无私分享技术的人，我希望也能成为那样的人。</p><p>下面我就简单记录下我搭建博客的流程吧（HEXO）<br>一<br>首先是环境支持，需要安装node，git，hexo<br>然后就是在你电脑上建立一个文件专门放你的博客，可以用 hexo init </p><p>二<br>hexo s   用这个命令就可以在本地跑起来项目了（预览用）</p><p>三<br>hexo n ‘你的博客文章名字’  这样就生成了博客文章，你可以用vscode直接写东西了</p><p>四<br>hexo g 这样生成一下你写的文章</p><p>完成上述步骤本地博客就搭建完成了，接下来就是如何放到github上</p><p>一<br>你要在github上建立一个仓库，名称一定要是你的昵称.github.io</p><p>二<br>装一个部署的插件 cpm install hexo–gir –save</p><p>三<br>需要设置一个重要的文件 _config.yml<br>在里面找到deploy，按照如下设置<br>deploy:<br>  type: ‘git’<br>  repo: <a href="https://github.com/FENGTIANQI-1/FENGTIANQI-1.github.io.git">https://github.com/FENGTIANQI-1/FENGTIANQI-1.github.io.git</a> （你仓库地址）<br>  branch: master</p><p>四<br>git config –global user.name ‘FENGTIANQI-1’<br>hexo d  部署到远端<br>然后博客就搭建完成了  以我的为例（FENGTIANQI-1.github.io）直接访问就OK了</p>]]></content>
     
